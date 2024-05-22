@@ -16,8 +16,11 @@ function ListItem(props) {
 
     return (<li>
         <Card className={props.item.done ? "done item" : "item"} >
+            <div className="itemText">
             {props.item.text}
-            <div>
+            </div>
+
+            <div className="itemBtn">
                 <button onClick={() => { props.onDone(props.item) }}><DoneImg done={props.item.done}></DoneImg></button>
                 <button onClick={() => { props.onItemDeleted(props.item) }}><img alt="Delete" src="./assets/bin.png"></img></button>
             </div>

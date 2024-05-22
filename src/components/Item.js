@@ -1,13 +1,19 @@
+class Item {
+    static getLastId() {
+        const lastId = localStorage.getItem('lastId');
+        return lastId ? parseInt(lastId, 10) : 0;
+    }
 
-class Item{
+    static setLastId(id) {
+        localStorage.setItem('lastId', id);
+    }
 
-    static lastId = 0;
-
-    constructor(text){
-        this.id = Item.lastId++
+    constructor(text) {
+        this.id = Item.getLastId() + 1;
+        Item.setLastId(this.id);
         this.text = text;
         this.done = false;
     }
 }
 
-export default Item
+export default Item;

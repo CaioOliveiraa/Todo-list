@@ -1,34 +1,115 @@
 .container {
     margin: auto;
-    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .done {
     text-decoration: line-through;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 5px;
+    padding: 0 5px 0 5px;
+}
+
 ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    margin: 30px 0 20px 0;
     padding: 0;
+    height: 100%;
+    max-width: 80%;
 }
 
 .item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
-    
-    width: 100%;
+    flex-direction: column;
+    font-size: 25px;
+    width: 200px;
+    height: 300px;
     padding: 15px;
-    margin-top: 15px;
+    margin: 15px;
     border-radius: 20px;
 }
 
-.card{
-    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
+.itemText {
+    height: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+button {
+    margin: 3px;
+    width: 90px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.addBtn {
+    border-radius: 45px;
+    font-size: 20px;
+    color: white;
+    background-color: skyblue;
 }
 
 img {
     width: 20px;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.cardModal {
+    padding: 20px;
+    background-color: #fff;
 }
